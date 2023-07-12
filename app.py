@@ -38,7 +38,7 @@ selected_movie_name = st.selectbox('Select a movie',movies['title'].values)
 if st.button('Recommend'):
     names, posters = recommend(selected_movie_name)
     #Please replace st.beta_columns with st.columns. st.beta_columns will be removed after 2021-11-02.
-    for i, col in enumerate(st.beta_columns(5)):
+    for i, col in enumerate(st.columns(5)):
         with col:
             st.text(names[i])
             st.image(posters[i])
